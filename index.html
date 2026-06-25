@@ -1,23 +1,108 @@
-<!-- index.html -->
-<nav>
-  <button data-tab="home">Home</button>
-  <button data-tab="about">About Me</button>
-  <button data-tab="contact">Contact Me</button>
-  <button data-tab="gallery">My Gallery</button>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="script.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="#home" class="logo">My Portfolio</a>
+      <div class="nav-tabs">
+        <button class="tab-link active" data-tab="home">Home</button>
+        <button class="tab-link" data-tab="about">About Me</button>
+        <button class="tab-link" data-tab="contact">Contact Me</button>
+        <button class="tab-link" data-tab="gallery">My Gallery</button>
+      </div>
+    </nav>
+  </header>
 
-<section id="home">Welcome to my portfolio.</section>
-<section id="about" hidden>About me content here.</section>
-<section id="contact" hidden>
-  <form id="contactForm">
-    <input placeholder="Your name" required>
-    <input type="email" placeholder="Your email" required>
-    <textarea placeholder="Your message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-  <p id="acknowledgement" hidden>Thank you! Your message has been sent.</p>
-</section>
-<section id="gallery" hidden>
-  <img src="photo1.jpg" alt="Gallery photo">
-  <img src="photo2.jpg" alt="Gallery photo">
-</section>
+  <main>
+    <section id="home" class="tab-content active hero-section">
+      <div class="hero-text">
+        <p class="eyebrow">Hello, welcome to my portfolio</p>
+        <h1>I am a creative learner building meaningful digital experiences.</h1>
+        <p>
+          This portfolio introduces who I am, what I enjoy creating, and a small
+          gallery of moments and projects that represent my style.
+        </p>
+        <button class="primary-button" data-tab-target="about">Know More</button>
+      </div>
+    </section>
+
+    <section id="about" class="tab-content content-section">
+      <div class="section-heading">
+        <p class="eyebrow">About Me</p>
+        <h2>Curious, focused, and always learning.</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>
+            I am passionate about technology, design, and problem solving. I enjoy
+            learning new tools, creating clean web pages, and improving my skills
+            through practical projects.
+          </p>
+          <p>
+            My goal is to build work that is simple, useful, and visually appealing.
+            I believe every project is an opportunity to learn something new.
+          </p>
+        </div>
+        <div class="skills-panel">
+          <h3>My Interests</h3>
+          <ul>
+            <li>Web Design</li>
+            <li>Frontend Development</li>
+            <li>Creative Projects</li>
+            <li>Photography</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="tab-content content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Contact Me</p>
+        <h2>Send me a message.</h2>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+        <button type="submit" class="primary-button">Send Message</button>
+      </form>
+      <p id="acknowledgement" class="acknowledgement" hidden>
+        Thank you! Your message has been sent successfully.
+      </p>
+    </section>
+
+    <section id="gallery" class="tab-content content-section">
+      <div class="section-heading">
+        <p class="eyebrow">My Gallery</p>
+        <h2>A collection of photos.</h2>
+      </div>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Laptop workspace">
+        <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80" alt="Architecture detail">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Outdoor landscape">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80" alt="Mountain road">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Digital work setup">
+        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=900&q=80" alt="Desk with computer">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
