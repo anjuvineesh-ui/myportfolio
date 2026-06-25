@@ -1,0 +1,23 @@
+<!-- index.html -->
+<nav>
+  <button data-tab="home">Home</button>
+  <button data-tab="about">About Me</button>
+  <button data-tab="contact">Contact Me</button>
+  <button data-tab="gallery">My Gallery</button>
+</nav>
+
+<section id="home">Welcome to my portfolio.</section>
+<section id="about" hidden>About me content here.</section>
+<section id="contact" hidden>
+  <form id="contactForm">
+    <input placeholder="Your name" required>
+    <input type="email" placeholder="Your email" required>
+    <textarea placeholder="Your message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <p id="acknowledgement" hidden>Thank you! Your message has been sent.</p>
+</section>
+<section id="gallery" hidden>
+  <img src="photo1.jpg" alt="Gallery photo">
+  <img src="photo2.jpg" alt="Gallery photo">
+</section>
